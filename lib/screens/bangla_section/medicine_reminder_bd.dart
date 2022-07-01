@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:listview/column.dart';
-
-// যোগাযোগ করুন ফাইল এখানে
-class Communication_dart extends StatefulWidget {
-  const Communication_dart({Key? key}) : super(key: key);
+class MedicineReminder extends StatefulWidget {
+  const MedicineReminder({Key? key}) : super(key: key);
 
   @override
-  State<Communication_dart> createState() => _Communication_dartState();
+  State<MedicineReminder> createState() => _MedicineReminderState();
 }
 
-class _Communication_dartState extends State<Communication_dart> {
+class _MedicineReminderState extends State<MedicineReminder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +40,7 @@ class _Communication_dartState extends State<Communication_dart> {
                   ))),
         ),
         title: Text(
-          'যোগাযোগ করুন',
+          'মেডিসিন রিমাইন্ডার',
           style: TextStyle(
               color: Colors.black,
               fontSize: 18,
@@ -51,8 +48,6 @@ class _Communication_dartState extends State<Communication_dart> {
               fontWeight: FontWeight.normal),
         ),
       ),
-
-      // Details code will be here.....
     );
   }
 }
