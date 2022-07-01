@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:listview/communication.dart';
 
 class listView extends StatefulWidget {
   const listView({Key? key}) : super(key: key);
@@ -44,7 +45,7 @@ class _listViewState extends State<listView> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.only(right: 25),
               child: Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.green,
@@ -325,7 +326,7 @@ class _listViewState extends State<listView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('সচারচ্র জিজ্ঞাসাসমূহ',
+                          Text('সচারচর জিজ্ঞাসাসমূহ',
                               style:
                                   TextStyle(color: Colors.black, fontSize: 18)),
                           Icon(
@@ -358,20 +359,25 @@ class _listViewState extends State<listView> {
 
                     Divider(color: Colors.black, height: 36, thickness: .05),
 
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 15),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text('যোগাযোগ',
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 18)),
-                          Icon(
-                            Icons.email_outlined,
-                            size: 25,
-                            color: Colors.green,
-                          ),
-                        ],
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> Communication_dart()));
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('যোগাযোগ',
+                                style:
+                                    TextStyle(color: Colors.black, fontSize: 18)),
+                            Icon(
+                              Icons.email_outlined,
+                              size: 25,
+                              color: Colors.green,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Divider(color: Colors.black, height: 36, thickness: .05),
